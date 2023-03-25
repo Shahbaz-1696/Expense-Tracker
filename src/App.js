@@ -24,9 +24,15 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseData = (expense) => {
+    console.log("In App.js");
+    console.log(expense);
+  }
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense = {addExpenseData} />
       <Expenses items={expenses} />
     </div>
   );
